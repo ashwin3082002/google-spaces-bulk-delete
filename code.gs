@@ -75,13 +75,16 @@ function main(){
     if(resp['state']=="NOT_A_MEMBER"){
       Logger.log("Email Not Found: "+emails[i])
     }
-    var memberId = extractMemberId(resp['name']);
-    var status = deleteMember(memberId,spacesId);
-    if(status){
-      Logger.log("Removed Email: "+emails[i])
-    }
     else{
-      Logger.log("Something Went Wrong while removing.")
+      var memberId = extractMemberId(resp['name']);
+      var status = deleteMember(memberId,spacesId);
+      if(status){
+        Logger.log("Removed Email: "+emails[i])
+      }
+      else{
+        Logger.log("Something Went Wrong while removing.")
+      }
     }
+    
   }
 }
