@@ -66,8 +66,8 @@ function deleteMember(memberId,spacesId){
 }
 
 function main(){
-  var emails = getEmailsFromSheet("1Guo4gM6HojI_xAr_Z1iMsHpxqU6-xobIwuwG2oqZci4");
-  var spacesId = "AAAATUfoVX0";
+  var emails = getEmailsFromSheet("SHEET_ID");
+  var spacesId = "GOOGLE_SPACES_ID";
 
   for(i in emails){
     var resp = getMemberID(emails[i],spacesId);
